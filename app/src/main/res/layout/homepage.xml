@@ -7,6 +7,14 @@
     tools:context=".MainActivity"
     android:background="@drawable/home">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:alpha=".4"
+        android:background="@drawable/backimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/dollar_symbol"
@@ -15,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/dollar_sym"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,7 +35,7 @@
         android:layout_height="46dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="L.L to U.S.D"
         android:textAppearance="@style/title"
@@ -41,7 +49,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="Buy:"
         android:textAppearance="@style/primary"
@@ -56,7 +64,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/rectangle_1"
         app:layout_constraintStart_toEndOf="@+id/buy_"
         app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
@@ -67,7 +75,7 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:text="Rate"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
@@ -82,7 +90,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Sell:"
         android:textAppearance="@style/primary"
@@ -96,7 +104,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rectangle_1"
         app:layout_constraintStart_toEndOf="@+id/sell_"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
@@ -106,7 +114,7 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toEndOf="@+id/sell_"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
         android:text="Rate"

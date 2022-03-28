@@ -7,6 +7,13 @@
     tools:context=".calcActivity"
     android:background="@drawable/home">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:alpha=".4"
+        android:background="@drawable/backimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/dollar_symbol"
@@ -15,7 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/dollar_sym"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,14 +33,13 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="36dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:text="Enter ONE of the blanks below to convert"
         android:textAppearance="@style/title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dollar_symbol"/>
+        app:layout_constraintTop_toBottomOf="@+id/dollar_symbol" />
 
     <TextView
         android:id="@+id/buy_"
@@ -71,7 +77,8 @@
         android:hint="enter here"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
-        android:textColorHint="#FFFFFF"
+        android:textColor="#DFF6FF"
+        android:textColorHint="#DFF6FF"
         app:layout_constraintStart_toEndOf="@+id/buy_"
         app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
 
@@ -110,7 +117,8 @@
         android:hint="enter here"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
-        android:textColorHint="#FFFFFF"
+        android:textColor="#DFF6FF"
+        android:textColorHint="#DFF6FF"
         app:layout_constraintStart_toEndOf="@+id/sell_"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
 
