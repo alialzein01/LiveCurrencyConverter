@@ -3,6 +3,7 @@ package com.example.group_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -28,6 +29,7 @@ public class calcActivity extends AppCompatActivity {
         calc = (Button) findViewById(R.id.convert_btn);
     }
 
+    // Convert function
     public void conv(View view) {
         String ll = l_amount.getText().toString();
         String dd = d_amount.getText().toString();
@@ -39,14 +41,20 @@ public class calcActivity extends AppCompatActivity {
         }
     }
 
+    //intent to go back to the rate page (home page)
+    public void goback(View view) {
+        Intent in = new Intent(this,MainActivity.class);
+        startActivity(in);
+    }
+
+    // this function gives a format to the results
     private String formatNum(String n) {
-        // this function gives a format to the results
         DecimalFormat form = new DecimalFormat("###,###,##0.0");
         return form.format(Double.parseDouble(n));
     }
 
+    // the function used to close the keyboard
     private void closeKeyboard() {
-        // the function used to close the keyboard
         View v = this.getCurrentFocus();
         if (v != null) {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
