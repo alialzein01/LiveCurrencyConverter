@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextP(View view) {
+        // Use the intent to move from one page to another, here from home page to calculator page
         Intent in = new Intent(MainActivity.this, calcActivity.class);
         startActivity(in);
     }
