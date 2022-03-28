@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/home">
+
+
+    <ImageView
+        android:id="@+id/dollar_symbol"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/dollar_sym"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/l_l_to_u_s_"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="L.L to U.S.D"
+        android:textAppearance="@style/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dollar_symbol"/>
+
+    <TextView
+        android:id="@+id/buy_"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Buy:"
+        android:textAppearance="@style/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
+
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintStart_toEndOf="@+id/buy_"
+        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/buy_rate"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/buy_"
+        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
+        android:textAppearance="@style/secondary"
+        android:text="Rate"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:id="@+id/sell_"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Sell:"
+        android:textAppearance="@style/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buy_" />
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintStart_toEndOf="@+id/sell_"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
+
+    <TextView
+        android:id="@+id/sell_rate"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/sell_"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+        android:text="Rate"
+        android:textAlignment="center"
+        android:textAppearance="@style/secondary"/>
+
+    <Button
+        android:id="@+id/converter_btn"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/custom_button"
+        android:text="Converter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sell_" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
