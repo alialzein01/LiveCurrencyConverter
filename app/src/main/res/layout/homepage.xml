@@ -24,13 +24,12 @@
     <TextView
         android:id="@+id/l_l_to_u_s_"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="36dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:gravity="center"
-        android:text="Enter ONE of the blanks below to convert"
+        android:text="L.L to U.S.D"
         android:textAppearance="@style/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dollar_symbol"/>
@@ -44,10 +43,11 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Lira:"
+        android:text="Buy:"
         android:textAppearance="@style/primary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
+
 
     <View
         android:id="@+id/rectangle_1"
@@ -62,17 +62,18 @@
         app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/lira_amount"
+    <TextView
+        android:id="@+id/buy_rate"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:text="0000"
+        android:text="Rate"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
         app:layout_constraintStart_toEndOf="@+id/buy_"
         app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
+
 
     <TextView
         android:id="@+id/sell_"
@@ -83,7 +84,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Dollar:"
+        android:text="Sell:"
         android:textAppearance="@style/primary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buy_" />
@@ -100,55 +101,17 @@
         app:layout_constraintStart_toEndOf="@+id/sell_"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
 
-    <EditText
-        android:id="@+id/dollar_amount"
+    <TextView
+        android:id="@+id/sell_rate"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:text="0000"
-        android:textAlignment="center"
-        android:textAppearance="@style/secondary"
         app:layout_constraintStart_toEndOf="@+id/sell_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
-
-    <TextView
-        android:id="@+id/result_"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Result:"
-        android:textAppearance="@style/primary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sell_" />
-
-    <View
-        android:id="@+id/group_3"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rectangle_2"
-        app:layout_constraintStart_toEndOf="@+id/result_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
-
-    <TextView
-        android:id="@+id/result_text"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/result_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+        android:text="Rate"
         android:textAlignment="center"
-        android:textAppearance="@style/primary"
-        android:text="10000"/>
+        android:textAppearance="@style/secondary"/>
 
     <Button
         android:id="@+id/converter_btn"
@@ -159,7 +122,8 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="120dp"
         android:background="@drawable/custom_button"
-        android:text="Convert"
+        android:onClick="nextP"
+        android:text="Converter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sell_" />
 
