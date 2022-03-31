@@ -3,11 +3,11 @@ package com.example.group_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+<<<<<<< HEAD:frontend/app/src/main/java/com/example/group_project/MainActivity.java
 <<<<<<< HEAD:frontend/app/src/main/java/com/example/group_project/MainActivity.java
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,9 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
 import java.util.HashMap;
 
+=======
+>>>>>>> parent of a2d9c96 (Adding Backend):app/src/main/java/com/example/group_project/MainActivity.java
 public class MainActivity extends AppCompatActivity {
-    String url = "https://10.2.0.0/apiReq.php";
-    ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
