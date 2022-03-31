@@ -8,6 +8,7 @@
     android:background="@drawable/home">
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:alpha=".4"
@@ -22,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/dollar_sym"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -178,11 +179,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.707" />
 
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="41dp"
-        android:layout_height="43dp"
-        android:background="#5D8BF4"
         android:onClick="goback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -190,9 +189,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022"
-        app:srcCompat="@android:drawable/ic_menu_revert"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/back_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
