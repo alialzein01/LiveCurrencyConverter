@@ -44,8 +44,21 @@ public class calcActivity extends AppCompatActivity {
         // showing an error if the user did not fill any value
         if (ll.isEmpty() && dd.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please enter a value in one of the boxes", Toast.LENGTH_LONG).show();
-        } else if (!ll.isEmpty() && !dd.isEmpty()) {
+        } //showing an error if the user entered both values
+        else if (!ll.isEmpty() && !dd.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Fill only ONE Box", Toast.LENGTH_LONG).show();
+        } //converting from lira to dollar
+        else if (!ll.isEmpty() && dd.isEmpty()){
+            int lira = Integer.parseInt(ll);
+            int dollar = lira/buy_cal;
+            String dollar_s = String.valueOf(dollar);
+            d_amount.setText(formatNum(dollar_s));
+        } // converting from dollar to lira
+        else {
+            int dollar = Integer.parseInt(dd);
+            int lira = dollar*sell_cal;
+            String lira_s = String.valueOf(lira);
+            l_amount.setText(formatNum(lira_s));
         }
 
     }
