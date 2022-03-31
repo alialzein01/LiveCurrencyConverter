@@ -76,7 +76,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="60dp"
-        android:text="Rate"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
         app:layout_constraintStart_toEndOf="@+id/buy_"
@@ -117,7 +116,6 @@
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toEndOf="@+id/sell_"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
-        android:text="Rate"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"/>
 
@@ -143,6 +141,7 @@
         android:onClick="nextP"
         android:text="Converter"
         android:textAppearance="@style/secondary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sell_" />
 

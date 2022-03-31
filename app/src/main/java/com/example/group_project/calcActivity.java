@@ -18,6 +18,8 @@ public class calcActivity extends AppCompatActivity {
     EditText l_amount;
     EditText d_amount;
     Button calc;
+    int buy_cal;
+    int sell_cal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,10 @@ public class calcActivity extends AppCompatActivity {
         l_amount = (EditText) findViewById(R.id.lira_amount);
         d_amount = (EditText) findViewById(R.id.dollar_amount);
         calc = (Button) findViewById(R.id.convert_btn);
+        // catch values from previous page
+        Intent x = getIntent();
+        buy_cal = Integer.parseInt(x.getStringExtra("buy_rate"));
+        sell_cal = Integer.parseInt(x.getStringExtra("sell_rate"));
     }
 
     // Convert function
@@ -43,7 +49,7 @@ public class calcActivity extends AppCompatActivity {
 
     //intent to go back to the rate page (home page)
     public void goback(View view) {
-        Intent in = new Intent(this,MainActivity.class);
+        Intent in = new Intent(this, MainActivity.class);
         startActivity(in);
     }
 

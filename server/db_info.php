@@ -11,13 +11,12 @@ if(mysqli_connect_errno()){
     die("Conenction Failed!");
 }
 
-$id = $_POST["id"];
 $live_rate = $_POST["live_rate"];
 $usd_rate = $_POST["usd_rate"];
 $lbp_rate = $_POST["lbp_rate"]
 
-$query = $mysqli->prepare("INSERT INTO historyofrate (id, live_rate, usd_rate,lbp_rate) VALUES (?, ?, ?,?)");
-$query->bind_param("sss", $id, $live_rate, $usd_rate,$lbp_rate);
+$query = $mysqli->prepare("INSERT INTO historyofrate (live_rate, usd_rate,lbp_rate) VALUES (?, ?, ?,?)");
+$query->bind_param("ddd", $live_rate, $usd_rate,$lbp_rate);
 $query->execute();
 
 $response = [];
