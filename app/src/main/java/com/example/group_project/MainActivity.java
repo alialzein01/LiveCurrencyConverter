@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView refresh_button;
     public TextView buy_r;
     public TextView sell_r;
+    public String buyRate;
+    public String sellRate;
 
     public class DownloadTask extends AsyncTask<String, Void, String> {
 
@@ -59,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
             try{
                 String[] rates = s.split(" ");
                 buy_r.setText(rates[0]);
+                buyRate = rates[0];
                 sell_r.setText(rates[1]);
+                sellRate = rates[1];
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -73,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.homepage);
         buy_r = (TextView) findViewById(R.id.buy_rate);
         sell_r = (TextView) findViewById(R.id.sell_rate);
+        //buyRate = (String) buy_r.getText();
+        //sellRate = (String) sell_r.getText();
         String url = "http://10.0.2.2/apiReq.php";
         DownloadTask task = new DownloadTask();
         task.execute(url);
