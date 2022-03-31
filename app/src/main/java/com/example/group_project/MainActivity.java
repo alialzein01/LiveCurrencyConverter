@@ -7,21 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-<<<<<<< HEAD:frontend/app/src/main/java/com/example/group_project/MainActivity.java
-<<<<<<< HEAD:frontend/app/src/main/java/com/example/group_project/MainActivity.java
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-=======
 public class MainActivity extends AppCompatActivity {
     private ImageView refresh_button;
->>>>>>> 31df20bb282a5f0a5305d54e05a7f641a6278c45:app/src/main/java/com/example/group_project/MainActivity.java
-
-import java.util.HashMap;
-
-=======
->>>>>>> parent of a2d9c96 (Adding Backend):app/src/main/java/com/example/group_project/MainActivity.java
-public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
