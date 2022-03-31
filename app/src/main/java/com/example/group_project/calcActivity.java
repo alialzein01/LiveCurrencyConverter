@@ -44,7 +44,10 @@ public class calcActivity extends AppCompatActivity {
         // showing an error if the user did not fill any value
         if (ll.isEmpty() && dd.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please enter a value in one of the boxes", Toast.LENGTH_LONG).show();
+        } else if (!ll.isEmpty() && !dd.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Fill only ONE Box", Toast.LENGTH_LONG).show();
         }
+
     }
 
     //intent to go back to the rate page (home page)

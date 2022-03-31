@@ -75,13 +75,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:hint="enter here"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
         android:textColor="#DFF6FF"
         android:textColorHint="#DFF6FF"
         app:layout_constraintStart_toEndOf="@+id/buy_"
-        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
+        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/sell_"
@@ -115,13 +115,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:hint="enter here"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
         android:textColor="#DFF6FF"
         android:textColorHint="#DFF6FF"
         app:layout_constraintStart_toEndOf="@+id/sell_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/result_"
