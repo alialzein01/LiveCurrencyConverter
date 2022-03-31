@@ -42,39 +42,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dollar_symbol" />
 
-    <TextView
-        android:id="@+id/buy_"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Lira:"
-        android:textAppearance="@style/primary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
 
-    <View
-        android:id="@+id/rectangle_1"
+    <EditText
+        android:id="@+id/dollar_amount"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rectangle_1"
-        app:layout_constraintStart_toEndOf="@+id/buy_"
-        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/secondary"
+        android:textColor="#DFF6FF"
+        android:textColorHint="#DFF6FF"
+        app:layout_constraintStart_toEndOf="@+id/sell_"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/lira_amount"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
         android:textAlignment="center"
         android:textAppearance="@style/secondary"
         android:textColor="#DFF6FF"
@@ -89,8 +77,8 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:text="Dollar:"
         android:textAppearance="@style/primary"
@@ -103,62 +91,38 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/rectangle_1"
         app:layout_constraintStart_toEndOf="@+id/sell_"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
 
-    <EditText
-        android:id="@+id/dollar_amount"
+    <View
+        android:id="@+id/rectangle_1"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:textAlignment="center"
-        android:textAppearance="@style/secondary"
-        android:textColor="#DFF6FF"
-        android:textColorHint="#DFF6FF"
-        app:layout_constraintStart_toEndOf="@+id/sell_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintStart_toEndOf="@+id/buy_"
+        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/result_"
+        android:id="@+id/buy_"
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
-        android:text="Result:"
+        android:text="Lira:"
         android:textAppearance="@style/primary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sell_" />
-
-    <View
-        android:id="@+id/group_3"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rectangle_2"
-        app:layout_constraintStart_toEndOf="@+id/result_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
-
-    <TextView
-        android:id="@+id/result_text"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/result_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_2"
-        android:textAlignment="center"
-        android:textAppearance="@style/primary"/>
+        app:layout_constraintTop_toBottomOf="@+id/l_l_to_u_s_" />
 
     <Button
         android:id="@+id/convert_btn"
@@ -167,18 +131,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/custom_button"
         android:onClick="conv"
         android:text="Convert"
         android:textAppearance="@style/secondary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
-
+        app:layout_constraintTop_toBottomOf="@+id/sell_" />
 
     <ImageView
         android:id="@+id/imageView"
