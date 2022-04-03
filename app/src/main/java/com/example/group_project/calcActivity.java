@@ -47,18 +47,19 @@ public class calcActivity extends AppCompatActivity {
         } //showing an error if the user entered both values
         else if (!ll.isEmpty() && !dd.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Fill only ONE Box", Toast.LENGTH_LONG).show();
-        } //converting from lira to dollar
-        else if (!ll.isEmpty() && dd.isEmpty()){
-            int lira = Integer.parseInt(ll);
-            int dollar = lira/buy_cal;
-            String dollar_s = String.valueOf(dollar);
-            d_amount.setText(formatNum(dollar_s));
-        } // converting from dollar to lira
-        else {
-            int dollar = Integer.parseInt(dd);
-            int lira = dollar*sell_cal;
-            String lira_s = String.valueOf(lira);
-            l_amount.setText(formatNum(lira_s));
+        } else { //converting from lira to dollar
+            if (dd.isEmpty()) {
+                double lira = Double.parseDouble(ll);
+                double dollar = lira / buy_cal;
+                String dollar_s = String.valueOf(dollar);
+                d_amount.setText(formatNum(dollar_s) + " $");
+            } // converting from dollar to lira
+            else if (ll.isEmpty()) {
+                double dollar = Double.parseDouble(dd);
+                double lira = dollar * sell_cal;
+                String lira_s = String.valueOf(lira);
+                l_amount.setText(formatNum(lira_s) + " LL");
+            }
         }
 
     }
@@ -71,7 +72,7 @@ public class calcActivity extends AppCompatActivity {
 
     // this function gives a format to the results
     private String formatNum(String n) {
-        DecimalFormat form = new DecimalFormat("###,###,##0.0");
+        DecimalFormat form = new DecimalFormat("###,###,##0.##");
         return form.format(Double.parseDouble(n));
     }
 

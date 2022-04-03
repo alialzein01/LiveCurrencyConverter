@@ -131,11 +131,11 @@
 
     <Button
         android:id="@+id/converter_btn"
-        android:layout_width="135dp"
-        android:layout_height="50dp"
+        android:layout_width="151dp"
+        android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="128dp"
         android:layout_marginTop="172dp"
         android:background="@drawable/custom_button"
         android:onClick="nextP"
