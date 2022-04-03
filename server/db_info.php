@@ -12,18 +12,18 @@ if(mysqli_connect_errno()){
     die("Conenction Failed!");
 }
 
-$live_rate = $_POST["live_rate"];
-$usd_rate = $_POST["usd_rate"];
-$lbp_rate = $_POST["lbp_rate"]
+// $live_rate = $_POST["live_rate"];
+// $usd_rate = $_POST["usd_rate"];
+// $lbp_rate = $_POST["lbp_rate"]
 
-$query = $mysqli->prepare("INSERT INTO historyofrate (live_rate, usd_rate,lbp_rate) VALUES (?, ?, ?,?)");
-$query->bind_param("ddd", $live_rate, $usd_rate,$lbp_rate);
-$query->execute();
+// $query = $mysqli->prepare("INSERT INTO historyofrate (live_rate, usd_rate,lbp_rate) VALUES (?, ?, ?)");
+// $query->bind_param("ddd", $live_rate, $usd_rate,$lbp_rate);
+// $query->execute();
 
-$response = [];
-$response["status"] = "Mabrouk!";
+// $response = [];
+// $response["status"] = "Mabrouk!";
 
-$json_response = json_encode($response);
-echo $json_response;
+// $json_response = json_encode($response);
+// echo $json_response;
 
 ?>

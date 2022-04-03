@@ -1,7 +1,7 @@
 <?php
 
 // link of the api
-$url = "https://lirarate.org/wp-json/lirarate/v2/rates?currency=LBP&_ver=t20224221";
+$url = "https://lirarate.org/wp-json/lirarate/v2/rates?currency=LBP&_ver=t20224322";
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_URL, $url);
