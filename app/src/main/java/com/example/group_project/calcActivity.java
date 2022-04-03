@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -11,6 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.DecimalFormat;
 
 public class calcActivity extends AppCompatActivity {
@@ -20,6 +25,48 @@ public class calcActivity extends AppCompatActivity {
     Button calc;
     int buy_cal;
     int sell_cal;
+
+    public class DownloadTask extends AsyncTask<String, Void, String> {
+
+        //method to read from the specified URL
+        protected String doInBackground(String... urls){
+            String result = "";
+            URL url;
+            HttpURLConnection http;
+
+            try{
+                url = new URL(urls[0]);
+                http = (HttpURLConnection) url.openConnection();
+
+                InputStream in = http.getInputStream();
+                InputStreamReader reader = new InputStreamReader(in);
+                int data = reader.read();
+
+                while( data != -1){
+                    char current = (char) data;
+                    result += current;
+                    data = reader.read();
+
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+                return null;
+            }
+
+            return result;
+        }
+
+
+        protected void onPostExecute(String s){
+            super.onPostExecute(s);
+            // display rates on calc page
+            try{
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,29 +86,32 @@ public class calcActivity extends AppCompatActivity {
     public void conv(View view) {
         String ll = l_amount.getText().toString();
         String dd = d_amount.getText().toString();
-        //closing the keyboard when the user press convert button
-        closeKeyboard();
+        double buy_rate = buy_cal;
+        double sell_rate = sell_cal;
+        boolean first_rate;
+        boolean second_rate;
+        double amount;
+
         // showing an error if the user did not fill any value
         if (ll.isEmpty() && dd.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please enter a value in one of the boxes", Toast.LENGTH_LONG).show();
         } //showing an error if the user entered both values
         else if (!ll.isEmpty() && !dd.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Fill only ONE Box", Toast.LENGTH_LONG).show();
-        } else { //converting from lira to dollar
-            if (dd.isEmpty()) {
-                double lira = Double.parseDouble(ll);
-                double dollar = lira / buy_cal;
-                String dollar_s = String.valueOf(dollar);
-                d_amount.setText(formatNum(dollar_s) + " $");
-            } // converting from dollar to lira
-            else if (ll.isEmpty()) {
-                double dollar = Double.parseDouble(dd);
-                double lira = dollar * sell_cal;
-                String lira_s = String.valueOf(lira);
-                l_amount.setText(formatNum(lira_s) + " LL");
+        } else{
+            if(dd.isEmpty()) {
+                first_rate = true;
+                second_rate = false;
+                amount = Double.parseDouble(ll);
+                String dollar_s = String.valueOf(amount);
+            } else {
+                second_rate = true;
+                first_rate = false;
+                amount = Double.parseDouble(dd);
+                String lira_s = String.valueOf(amount);
             }
+            String url2 = "http://10.0.2.2/api2/?buy_rate="+buy_rate+"&sell_rate="+sell_rate+"&first_rate="+first_rate+"&second_rate="+second_rate+"&amount="+amount;
         }
-
     }
 
     //intent to go back to the rate page (home page)
