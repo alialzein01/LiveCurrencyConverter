@@ -22,7 +22,7 @@ if($first_rate == "LL") {
 }
 
 // inserting to db
-$query = $mysqli->prepare("INSERT INTO historyofrate (buy_rate,sell_rate, first_rate,second_rate,amount_converted) VALUES ($buy_rate,$sell_rate, $first_rate, $second_rate,$amount_converted)");
+$query = $mysqli->prepare("INSERT INTO historyofrates (buy_rate,sell_rate, first_rate,second_rate,amount) VALUES ('$buy_rate','$sell_rate', '$first_rate', '$second_rate','$amount_converted')");
 $query->execute();
 
 echo json_encode($usd_res). " ".json_encode($ll_res);
