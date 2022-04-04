@@ -79,16 +79,7 @@ public class MainActivity extends AppCompatActivity {
         String url = "http://10.0.2.2/apiReq.php";
         DownloadTask task = new DownloadTask();
         task.execute(url);
-
-        // refresh button tp refresh whole app
-        refresh_button = findViewById(R.id.refresh_btn);
-        refresh_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                startActivity(getIntent());
-            }
-        });
+        
     }
 
     public void nextP(View view) {
