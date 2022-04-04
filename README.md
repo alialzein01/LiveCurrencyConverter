@@ -1,2 +1,4 @@
 # USD_Lira_Converter
 A mobile app similar to the previous Lebanese Lira to US Dollars converter app. This one will be fetching the live rate from lirarate.org. It will be consisting of two pages, a landing page that shows the rate and a converter page that acts as a calculator from Lebanese Lira to US Dollar.
+
+Note to Doctor Charbel: With this final commit I will be having 20 commits in total. I know some of them where useless like adding comments and like adding this note in the README. We had an old repo we were working on. I had atleast 10 commits for the front end designing and implementation. We faced many errors and agreed to delete the repo and start fresh on this one. You can notice that I commited approximately the whole frontend with the commit "Frontend Design (XML)". I hope you can understand and consider this when grading my commits.
