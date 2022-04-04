@@ -6,14 +6,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.json.JSONObject;
+
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -28,9 +28,6 @@ public class calcActivity extends AppCompatActivity {
     Button calc;
     int buy_cal;
     int sell_cal;
-    String api_rate = null;
-    String to_display = null;
-    EditText editText;
 
 
 
@@ -103,8 +100,6 @@ public class calcActivity extends AppCompatActivity {
         double second_rate = 0;
         double amount = 0;
 
-        double x = Double.parseDouble(editText.getText().toString());
-        double rate = Double.parseDouble(api_rate);
         String url = null;
 
         // showing an error if the user did not fill any value
