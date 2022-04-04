@@ -46,7 +46,7 @@ public class calcActivity extends AppCompatActivity {
     }
 
     public class StoreRate extends AsyncTask<String, Void, String> {
-
+        //To display rates from the API2
         protected String doInBackground(String... urls){
             String result = "";
             URL url;

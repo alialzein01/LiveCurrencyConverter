@@ -72,14 +72,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
+        //Getting the values from API1 On App creation
         buy_r = (TextView) findViewById(R.id.buy_rate);
         sell_r = (TextView) findViewById(R.id.sell_rate);
-        //buyRate = (String) buy_r.getText();
-        //sellRate = (String) sell_r.getText();
         String url = "http://10.0.2.2/apiReq.php";
         DownloadTask task = new DownloadTask();
         task.execute(url);
-        
+
     }
 
     public void nextP(View view) {
